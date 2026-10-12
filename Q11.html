@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Examples</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 650px;
+            margin: auto;
+            background-color: #f3f3f3;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 25px;
+            margin-top: 0;
+        }
+
+        /* Animation boxes */
+        .animations {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 25px;
+        }
+
+        .box {
+            width: 78px;
+            height: 78px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Color Change */
+        .color {
+            background-color: red;
+            animation: colorChange 2s infinite alternate;
+        }
+
+        @keyframes colorChange {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: blue;
+            }
+        }
+
+        /* Move */
+        .move {
+            background-color: purple;
+            animation: move 2s infinite alternate;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(20px);
+            }
+        }
+
+        /* Rotate */
+        .rotate {
+            background-color: teal;
+            animation: rotate 2s infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Pulse */
+        .pulse {
+            background-color: crimson;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Fade */
+        .fade {
+            background-color: gray;
+            animation: fade 2s infinite alternate;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0.3;
+            }
+        }
+
+        /* Loader */
+        .loader {
+            width: 65px;
+            height: 65px;
+            border: 8px solid #ddd;
+            border-top: 8px solid blue;
+            border-radius: 50%;
+            
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Square Path Animation */
+        h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .path {
+            width: 195px;
+            height: 195px;
+            border: 1px dashed black;
+            margin: auto;
+            position: relative;
+        }
+
+        .square {
+            width: 56px;
+            height: 56px;
+            background-color: green;
+            position: absolute;
+
+            animation: squarePath 4s linear infinite;
+        }
+
+        @keyframes squarePath {
+            0% {
+                left: 0;
+                top: 0;
+            }
+
+            25% {
+                left: 139px;
+                top: 0;
+            }
+
+            50% {
+                left: 139px;
+                top: 139px;
+            }
+
+            75% {
+                left: 0;
+                top: 139px;
+            }
+
+            100% {
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CSS Animation Examples</h1>
+
+        <div class="animations">
+
+            <div class="box color">
+                Color
+            </div>
+
+            <div class="box move">
+                Move
+            </div>
+
+            <div class="box rotate">
+                Rotate
+            </div>
+
+            <div class="box pulse">
+                Pulse
+            </div>
+
+            <div class="box fade">
+                Fade
+            </div>
+
+            <div class="loader"></div>
+
+        </div>
+
+        <h2>Square Path Animation</h2>
+
+        <div class="path">
+            <div class="square"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>
